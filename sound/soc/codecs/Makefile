@@ -425,5 +425,17 @@ obj-$(CONFIG_SND_SOC_MSM_STUB)  += snd-soc-msm-stub.o
 # Amp
 obj-$(CONFIG_SND_SOC_MAX9877)	+= snd-soc-max9877.o
 obj-$(CONFIG_SND_SOC_TPA6130A2)	+= snd-soc-tpa6130a2.o
+
+snd-soc-tfa98xx-objs += tfa9891/tfa98xx.o \
+	tfa9891/tfa_container.o \
+	tfa9891/tfa_dsp.o \
+	tfa9891/tfa9888_init.o \
+	tfa9891/tfa9891_init.o \
+	tfa9891/tfa9897_init.o \
+	tfa9891/tfa9890_init.o \
+	tfa9891/tfa9887B_init.o \
+	tfa9891/tfa9887_init.o
+obj-$(CONFIG_MACH_MSM8998_ONEPLUS5) += snd-soc-tfa98xx.o
+
 obj-y += sdm660_cdc/
 obj-y += msm_sdw/
